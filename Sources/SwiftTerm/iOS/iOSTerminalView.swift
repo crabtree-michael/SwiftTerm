@@ -996,6 +996,8 @@ open class TerminalView: UIScrollView, UITextInputTraits, UIKeyInput, UIScrollVi
         guard let context = getCurrentGraphicsContext() else {
             return
         }
+        
+        context.clear(dirtyRect)
 
         // Without these two lines, on font changes, some junk is being displayed
         // Once we test the font change, we could disable these two lines, and
